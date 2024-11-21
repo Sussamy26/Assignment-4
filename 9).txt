@@ -1,0 +1,45 @@
+//Program to Convert Uppercase to Lowercase
+
+#include <stdio.h>
+int main()
+{
+    char S1[100];
+    printf("Enter a string: ");
+    fgets(S1, sizeof(S1), stdin);
+    S1[strcspn(S1, "\n")] = 0;
+    int i = 0;
+    while (S1[i] != '\0')
+    {
+        if (S1[i] >= 'A' && S1[i] <= 'Z')
+        {
+            S1[i] = S1[i] + 32; 
+        }
+        i++;
+    }
+    printf("Converted string: %s\n", S1);
+    return 0;
+}
+
+
+//Program to Convert Lowercase to Uppercase
+
+#include <stdio.h>
+int main()
+{
+    char S1[100];
+    printf("Enter a string: ");
+    fgets(S1, sizeof(S1), stdin);
+    S1[strcspn(S1, "\n")] = 0;
+    int i = 0;
+    while (S1[i] != '\0')
+    {
+        if (S1[i] >= 'a' && S1[i] <= 'z')
+        {
+            S1[i] = S1[i] - 32; 
+        }
+        i++;
+    }
+    printf("Converted string: %s\n", S1);
+    return 0;
+}
+
